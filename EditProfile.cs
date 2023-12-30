@@ -31,7 +31,7 @@ namespace Clinic_Management_System
             SqlCommand command = con.CreateCommand();
             command.CommandText = "UPDATE account SET account_name = @name, account_dob = @dob, account_notes = @notes, account_phone = @phone WHERE account_id = @account_id";
             command.Parameters.AddWithValue("@name", textBox3.Text);
-            command.Parameters.AddWithValue("@dob", dateTimePicker1.Value.ToString());
+            command.Parameters.AddWithValue("@dob", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
             command.Parameters.AddWithValue("@phone", textBox4.Text);
             command.Parameters.AddWithValue("@notes", textBox6.Text);
             command.Parameters.AddWithValue("@account_id", account_id);

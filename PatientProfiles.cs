@@ -117,7 +117,7 @@ namespace Clinic_Management_System
             command.CommandText = "UPDATE account SET account_name = @name, account_phone = @phone, account_dob = @dob, account_notes = @notes WHERE account_id = @id";
             command.Parameters.AddWithValue("@name", textBox6.Text);
             command.Parameters.AddWithValue("@phone", textBox7.Text);
-            command.Parameters.AddWithValue("@dob", dateTimePicker1.Value.ToString());
+            command.Parameters.AddWithValue("@dob", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
             command.Parameters.AddWithValue("@notes", textBox8.Text);
             command.Parameters.AddWithValue("@id", textBox5.Text);
 
